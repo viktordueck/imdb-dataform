@@ -1,6 +1,6 @@
 config {
   type: "table",
-  schema: dataform.projectConfig.vars.BASE_DATA,
+  schema: dataform.projectConfig.vars.TARGET_DATA,
   description: "Contains the ratings for each season of a TV-Series",
   columns: {
     tconst: "Alphanumeric identifier of the TV Series.",
@@ -22,7 +22,7 @@ SELECT
   , AVG(r.average_rating) AS average_rating
   , AVG(r.num_votes) AS average_votes
   , SUM(r.num_votes) AS num_votes
-FROM ${ ref({ schema: dataform.projectConfig.vars.BASE_DATA, name: "title_episode" }) } AS e
-  LEFT JOIN ${ ref({ schema: dataform.projectConfig.vars.BASE_DATA, name: "title_ratings" }) } AS r
+FROM ${ ref({ schema: dataform.projectConfig.vars.TARGET_DATA, name: "title_episode" }) } AS e
+  LEFT JOIN ${ ref({ schema: dataform.projectConfig.vars.TARGET_DATA, name: "title_ratings" }) } AS r
     ON  e.tconst = r.tconst
 GROUP BY 1, 2

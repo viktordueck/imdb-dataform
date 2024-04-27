@@ -1,6 +1,6 @@
 config {
   type: "table",
-  schema: dataform.projectConfig.vars.BASE_DATA,
+  schema: dataform.projectConfig.vars.TARGET_DATA,
   description: "Contains the detail for each name/person",
   columns: {
     nconst: "Alphanumeric unique identifier of the name/person.",

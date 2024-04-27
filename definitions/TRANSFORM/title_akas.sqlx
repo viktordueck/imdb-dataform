@@ -1,6 +1,6 @@
 config {
   type: "table",
-  schema: dataform.projectConfig.vars.BASE_DATA,
+  schema: dataform.projectConfig.vars.TARGET_DATA,
   description: "Contains the also known as (AKA) for titles",
   columns: {
     title_id: "A tconst, an alphanumeric unique identifier of the title.",
