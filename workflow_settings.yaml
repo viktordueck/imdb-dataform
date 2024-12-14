@@ -1,5 +1,5 @@
 defaultProject: powerbi-integration-306012
-defaultLocation: eu-west3
+defaultLocation: europe-west3
 defaultDataset: imdb
 defaultAssertionDataset: imdb_assertions
 dataformCoreVersion: 3.0.0
